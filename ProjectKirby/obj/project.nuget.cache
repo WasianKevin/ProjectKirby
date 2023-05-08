@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "DQWqLy8vgzHAId1xbtXcsQ0yKCA8iGVkXxgcjpqAlehXvoeAWPmdKHq2wav56usfTc0AzGZ9R/HzGl5A1xAL6A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bengtsson.kevin\\Documents\\Programmering_2\\ProjectKirby\\ProjectKirby\\ProjectKirby.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bengtsson.kevin\\.nuget\\packages\\raylib-cs\\4.5.0\\raylib-cs.4.5.0.nupkg.sha512",
+    "C:\\Users\\bengtsson.kevin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
