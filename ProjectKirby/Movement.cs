@@ -20,6 +20,8 @@ public class Movement
         }
 
 
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_ESCAPE)) System.Environment.Exit(1);
+        
 
 
         //Changing direction of Kirby depending on what way he's walking
@@ -29,17 +31,32 @@ public class Movement
 
         if (playerRect.x >= 1100)
         {
-            playerRect.x = 1100;
             Raylib.DrawText("You cannot walk outside", 150, 200, 50, Color.BLACK);
             Raylib.DrawText("the border of the game!", 150, 275, 50, Color.BLACK);
         }
 
         if (playerRect.x <= 100)
         {
-            playerRect.x = 100;
             Raylib.DrawText("You cannot walk outside", 150, 200, 50, Color.BLACK);
             Raylib.DrawText("the border of the game!", 150, 275, 50, Color.BLACK);
         }
+
+        bool undoX = false;
+
+        List<Rectangle> Walls = new List<Rectangle>();
+        Walls.Add(new Rectangle(90, 10, 10, 1000));
+        Walls.Add(new Rectangle(1160, 10, 10, 1000));
+
+        //If I walk into a wall X, checks collision
+        foreach (Rectangle wall in Walls)
+        {
+            if (Raylib.CheckCollisionRecs(playerRect, wall) == true)
+            {
+                undoX = true;
+            }
+        }
+
+        if (undoX) playerRect.x -= movement.X;
 
         //if Kirby hits the floor he stops falling
         velocity += gravity;

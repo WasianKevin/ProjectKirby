@@ -22,7 +22,7 @@ Texture2D KibyMap2 = Raylib.LoadTexture("KibyMap2.png");
 
 Texture2D Kirby = Raylib.LoadTexture("Kirby.png");
 
-Rectangle playerRect = new Rectangle(60, 600, Kirby.width, Kirby.height);
+Rectangle playerRect = new Rectangle(160, 600, Kirby.width, Kirby.height);
 
 while (!Raylib.WindowShouldClose())
 {

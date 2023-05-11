@@ -2,22 +2,6 @@ using System;
 using System.Numerics;
 using Raylib_cs;
 
-// public class Kirby
-// {
-//     Rectangle rect = new Rectangle();
-
-//     Texture2D image;
-
-//     public void Update()
-//     {
-//         rect.X++;
-//     }
-
-//     public void Draw()
-//     {
-//         Raylib.DrawTexture(image, (int)rect.X, (int)rect.Y);
-//     }
-// }
 
 public class game
 {
@@ -38,9 +22,11 @@ public class game
 
         //Kirby
         Raylib.DrawTexture(Kirby, (int)playerRect.x, (int)playerRect.y, Color.WHITE);
-        
+
         //movement
         (speed, velocity, playerRect, isGrounded) = Movement.move(speed, playerRect, velocity, gravity, Kirby, isGrounded);
+
+        Raylib.DrawText("Press ESCAPE to quit the game!", 10, 10, 30, Color.RED);
 
         //Ends the drawing
         Raylib.EndDrawing();
