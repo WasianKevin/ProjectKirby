@@ -7,29 +7,15 @@ using Raylib_cs;
 Raylib.InitWindow(1200, 700, "Project: Kirby");
 Raylib.SetTargetFPS(60);
 
+CurrentRoom.room = "menu";
 
-//Strings, Bools etc.
-string room = "menu";
-int coins = 0;
-
-// Kirby k = new Kirby();
-
-
-//Alla bilder i spelet
-Texture2D main = Raylib.LoadTexture("Kiby.png");
-Texture2D KibyMap1 = Raylib.LoadTexture("KibyMap1.png");
-Texture2D KibyMap2 = Raylib.LoadTexture("KibyMap2.png");
-
-Texture2D Kirby = Raylib.LoadTexture("Kirby.png");
-
-Rectangle playerRect = new Rectangle(160, 600, Kirby.width, Kirby.height);
+CurrentRoom r1 = new CurrentRoom();
 
 while (!Raylib.WindowShouldClose())
 {
     //Start Screen
-    if (room == "menu") (room, main) = StartScreen.MainMenu(main, room);
-    // k.Draw();
+    if (CurrentRoom.room == "menu") r1.MainMenu();
     //Game
-    if (room == "game") (room, coins, playerRect) = game.kirbygame(room, coins, KibyMap1, Kirby, playerRect);
+    if (CurrentRoom.room == "game") r1.kirbygame();
 
 }
