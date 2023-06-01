@@ -58,6 +58,7 @@ public class Movement
 
         if (undoX) playerRect.x -= movement.X;
 
+
         //if Kirby hits the floor he stops falling
         velocity += gravity;
         if (playerRect.y >= 600 - playerRect.height)

@@ -26,8 +26,6 @@ Rectangle playerRect = new Rectangle(160, 600, Kirby.width, Kirby.height);
 
 while (!Raylib.WindowShouldClose())
 {
-    // k.Update();
-
     //Start Screen
     if (room == "menu") (room, main) = StartScreen.MainMenu(main, room);
     // k.Draw();

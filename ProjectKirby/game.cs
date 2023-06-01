@@ -23,6 +23,8 @@ public class game
         //Kirby
         Raylib.DrawTexture(Kirby, (int)playerRect.x, (int)playerRect.y, Color.WHITE);
 
+        
+
         //movement
         (speed, velocity, playerRect, isGrounded) = Movement.move(speed, playerRect, velocity, gravity, Kirby, isGrounded);
 
